@@ -1,6 +1,6 @@
 {
 	"name": "dotapp",
-	"version": "2.0.19",
+	"version": "2.1",
 	"description": "Core package of DOTAPP",
 	"main": "index.js",
 	"author": "Basem khirat",
