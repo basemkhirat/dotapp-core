@@ -16,7 +16,7 @@ module.exports = new class Index {
      * @param callback
      * @returns {*}
      */
-    async upload(payload, options = {}, callback) {
+    async save(payload, options = {}, callback) {
 
         if(typeof options === "function"){
             callback = options;
