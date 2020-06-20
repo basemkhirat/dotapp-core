@@ -103,7 +103,7 @@ module.exports = class {
 
                             let screenshot = Storage.disk("temp").path(options.filename);
 
-                            Media.upload(screenshot, (error, file) => {
+                            Media.save(screenshot, (error, file) => {
                                 if (error) return callback(error);
 
                                 this.resource.image = file.image;

@@ -24,7 +24,7 @@ module.exports = class {
 
         youtube.getVideo(url).then(video => {
 
-            Media.upload(video.thumbnails.maxres.url, (error, file) => {
+            Media.save(video.thumbnails.maxres.url, (error, file) => {
 
                 if (error) return callback(error, this.resource);
 

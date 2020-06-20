@@ -30,7 +30,7 @@ module.exports = class {
             this.resource.description = audio.description;
 
             if (audio.artwork_url) {
-                Media.upload(audio.artwork_url, (error, file) => {
+                Media.save(audio.artwork_url, (error, file) => {
                     this.resource.image = file.image;
                     callback(null, this.resource);
                 });
