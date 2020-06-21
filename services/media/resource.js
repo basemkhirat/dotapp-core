@@ -184,7 +184,7 @@ module.exports = class Resource {
             return callback(new FileSizeException("File size is too large"));
         }
 
-        let allowed_types = "types" in this.options ? this.options.types : [].concat.apply([], Object.values(this.media.types));
+        let allowed_types = "extensions" in this.options ? this.options.extensions : [].concat.apply([], Object.values(this.media.types));
 
         if (allowed_types.indexOf(this.file.extension) === -1) {
             return callback(new FileTypeException("File type is not allowed"));
