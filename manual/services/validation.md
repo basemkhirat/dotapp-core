@@ -48,7 +48,7 @@ export default class extends Controller {
 			}
 		);
 
-		let validation = new Validator(req.all(), {
+		let validation = Validator.make(req.all(), {
 			email: "required|email|email_available",
 		});
 
@@ -240,29 +240,11 @@ returns true if error messages exist for an attribute, false otherwise
 ---
 ## Methods:
 
-#### `passes()`
+#### `make(data, rules [, customErrorMessages])` [static]
 
-    @return boolean
+    @return object
 
-    check for a valid operation.
-
-#### `passesAsync()`
-
-    @return promise
-
-    check for a valid operation which uses an async rule.
-
-#### `fails()`
-
-    @return boolean
-
-    check for an invalid operation.
-
-#### `failsAsync()`
-
-    @return promise
-
-    check for invalid operation which uses an async rule.
+    create the validation object.
 
 #### `register(name, callbackFn, errorMessage)` [static]
 
@@ -287,6 +269,8 @@ Validator.register(
 );
 ```
 
+
+
 #### `registerAsync(name, callbackFn, errorMessage)` [static]
 
     @return void
@@ -304,6 +288,31 @@ Validator.registerAsync(
 	}
 );
 ```
+
+#### `passes()`
+
+    @return boolean
+
+    check for a valid operation.
+
+#### `passesAsync()`
+
+    @return promise
+
+    check for a valid operation which uses an async rule.
+
+#### `fails()`
+
+    @return boolean
+
+    check for an invalid operation.
+
+#### `failsAsync()`
+
+    @return promise
+
+    check for invalid operation which uses an async rule.
+
 
 ---
 
