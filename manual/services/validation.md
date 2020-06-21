@@ -314,6 +314,13 @@ Validator.registerAsync(
     check for invalid operation which uses an async rule.
 
 
+#### `setAttributeNames()`
+
+    @return void
+
+    set the the input name which should in messages.
+
+    validator.setAttributeNames({ name: 'custom_name' });
 ---
 
 Reference: https://github.com/skaterdav85/validatorjs
