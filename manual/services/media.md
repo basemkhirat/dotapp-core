@@ -176,7 +176,7 @@ export default class extends Controller {
 
 #### `save(payload)`
 
-    @return file object
+    @return promise which resolve the file object
 
     the payload can be:
 
