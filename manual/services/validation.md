@@ -318,7 +318,7 @@ Validator.registerAsync(
 
     @return void
 
-    set the the input name which should in messages.
+    set the the input name which is displayed in messages.
 
     validator.setAttributeNames({ name: 'custom_name' });
 ---
