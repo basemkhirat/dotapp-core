@@ -52,8 +52,8 @@ export default class extends Controller {
 			email: "required|email|email_available",
 		});
 
-		// you must the .validate() method as we add Async operation
-		// validate() method return a promise that resolve a boolean value
+		// you must the .failsAsync() method as we add Async operation
+		// failsAsync() method return a promise that resolve a boolean value
 
 		if (await validation.failsAsync()) {
 			return res.validationError(validation.errors.all());
