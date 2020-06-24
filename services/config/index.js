@@ -16,8 +16,6 @@ module.exports = new class {
             process.env[k] = envConfig[k];
         }
 
-        let default_configurations = require("../../config");
-
         let configurations = {};
 
         let directory = path.join(process.cwd(), "config");
@@ -27,10 +25,6 @@ module.exports = new class {
                 configurations[path.parse(file).name] = require(path.join(directory, file)).default;
             }
         });
-
-        for (let module in default_configurations) {
-            configurations[module] = merge(default_configurations[module], configurations[module]);
-        }
 
         let env_config_path = path.join(process.cwd(), "config/env/" + process.env.NODE_ENV);
 

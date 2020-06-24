@@ -2,7 +2,7 @@
 
 A tiny, light-weight and full-featured nodejs framework built on express.js with minimum dependencies.
 
-DOTAPP is shipped with combination of open sources libraries which are fully integrated to save the development time and efforts like users, roles an media.
+DOTAPP is shipped with combination of open sources libraries which are fully integrated to save the development time like users, roles an media.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ $ npm install
 
 1. Rename the file `.env.example` to `.env`.
 2. Change configurations in `.env` according to your environment.
-The `.env` file apears like this:
+The `.env` file appears like this:
 
     ``` bash
     NODE_ENV=development
@@ -47,7 +47,7 @@ The `.env` file apears like this:
 
     Secret key updated successfully!
     ```
-4. Create the administrator user using this comamnd:
+4. Create the administrator user using this command:
 
     ``` bash
     $ node run user:create
