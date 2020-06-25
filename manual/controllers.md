@@ -25,3 +25,13 @@ export default {
     "GET /hello": "HomeController.index
 }
 ```
+
+You may want to put your controllers in a sub directories like API versioning. In this case you must specify the controller relative path.
+
+``` javascript
+// routes/index.js
+
+export default {
+    "POST /api/v1/user": "v1/UsersController.create
+}
+```

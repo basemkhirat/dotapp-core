@@ -1,19 +1,37 @@
 # Restfull API Documentation
 
-DotApp provides an easy way to write your API endpoints using the swagger tool.
+DotApp provides an easy way to write your API endpoints using swagger tool.
+
+In `app.js` file you can define your docs middleware url
+
+``` javascript
+import App from "dotapp";
+import { docs, notFound, serverError } from "dotapp/middlewares";
+
+const app = App();
+
+app.use("/api/v1/docs", docs("v1"));
+
+app.use(notFound());
+app.use(serverError());
+
+export default app;
+```
+
+In the above code, you must specify the version like `v1` which resolve to the `docs/v1` folder in your project.
 
 ## Configuration
 
-`docs/index.js` is the configuration file where you can modify and add new API endpoints.
-
+`docs/v1/index.js` is the configuration file where you can modify and add new API endpoints.
 
 ``` javascript
+// docs/v1/index.js
 
-import auth from "~/docs/modules/auth";
-import media from "~/docs/modules/media";
-import user from "~/docs/modules/user";
-import role from "~/docs/modules/role";
-import permission from "~/docs/modules/permission";
+import auth from "~/docs/v1/modules/auth";
+import media from "~/docs/v1/modules/media";
+import user from "~/docs/v1/modules/user";
+import role from "~/docs/v1/modules/role";
+import permission from "~/docs/v1/modules/permission";
 
 export default {
     swagger: "2.0",
@@ -22,7 +40,7 @@ export default {
         description: "The API documentation",
         version: "1.0.0",
     },
-    basePath: "/api",
+    basePath: "/api/v1",
     paths: {
         ...auth,
         ...media,
