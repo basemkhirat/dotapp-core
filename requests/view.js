@@ -11,7 +11,7 @@ module.exports = function (name, payload = {}, callback) {
 
         payload.req = this.req;
 
-        let view_path = path.join(process.cwd(), Config.get("app.views") + "/" + name + ".ejs");
+        let view_path = path.join(Config.get("app.views"), name + ".ejs");
 
         ejs.renderFile(view_path, payload, (error, data) => {
 
