@@ -26,8 +26,8 @@ module.exports = () => {
 
     app.set("path", __dirname);
     app.set("env", process.env.NODE_ENV);
+    app.set("view engine", "ejs");
     app.set("views", Config.get("app.views"));
-    app.set("view engine", Config.get("app.view_engine"));
     app.set('trust proxy', Config.get("app.trust_proxy"));
 
     app.use(Http());
