@@ -1,8 +1,11 @@
 const swaggerUi = require("swagger-ui-express");
 const Config = require("dotapp/services/config");
 
-module.exports = function () {
-	let docs = require(process.cwd() + "/docs").default;
+module.exports = function (version) {
+	if (version === undefined)
+		throw new Error("Required version for docs middleware");
+
+	let docs = require(process.cwd() + "/docs/" + version).default;
 
 	docs.host = Config.get("app.url").replace(/(^\w+:|^)\/\//, "");
 
