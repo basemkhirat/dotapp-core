@@ -22,13 +22,13 @@ OR you can pass a controller method directly.
 // routes/index.js
 
 export default {
-    "GET /": "PostsController.index",
-    "POST /": "PostsController.create",
-    "PUT /:id": "PostsController.update",
-    "DELETE /:id": "PostsController.delete",
+    "GET /": "v1/PostsController.index",
+    "POST /": "v1/PostsController.create",
+    "PUT /:id": "v1/PostsController.update",
+    "DELETE /:id": "v1/PostsController.delete",
 
     // optional params
-     "GET /:parent?": "PostsController.index",
+     "GET /:parent?": "v1/PostsController.index",
 }
 ```
 
