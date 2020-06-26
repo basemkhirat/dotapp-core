@@ -13,7 +13,7 @@ module.exports = function (data, message) {
     response.success = true;
     response.data = data || undefined;
 
-    this.res.status(response.status);
+    this.res.status(200);
 
     return this.res.json(response);
 };

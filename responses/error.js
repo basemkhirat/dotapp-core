@@ -14,7 +14,7 @@ module.exports = function (message, code = 500, errors) {
     error.success = false;
     error.errors = errors || undefined;
 
-    this.res.status(error.status);
+    this.res.status(code);
 
     return this.res.json(error);
 };
