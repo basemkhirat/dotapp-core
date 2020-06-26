@@ -1,3 +1,5 @@
+process.env.APP_CONSOLE = true;
+
 const vorpal = require('vorpal');
 const walkSync = require('walk-sync');
 const path = require('path');
