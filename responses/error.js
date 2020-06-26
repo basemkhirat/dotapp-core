@@ -10,9 +10,9 @@ module.exports = function (message, code = 500, errors) {
     let error = new Error();
 
     error.message = message;
-    error.errors = errors || undefined;
-    error.status = code;
+    error.code = code;
     error.success = false;
+    error.errors = errors || undefined;
 
     this.res.status(error.status);
 

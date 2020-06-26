@@ -9,7 +9,7 @@ module.exports = function (data, message) {
     let response = {};
 
     response.message = message || this.req.lang("messages.ok");
-    response.status = 200;
+    response.code = 200;
     response.success = true;
     response.data = data || undefined;
 
