@@ -22,7 +22,7 @@ The result will be:
 ``` bash
 {
     message: "SUCCESS",
-    status: 200,
+    code: 200,
     success: true,
     data: "Hello World"
 }
@@ -37,7 +37,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: 200,
+    code: 200,
     success: true,
     data: <data>
 }
@@ -51,7 +51,7 @@ The result will be:
 {
     message: <message>,
     errors: <errors>,
-    status: 422,
+    code: 422,
     success: false
 }
 ```
@@ -63,7 +63,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: 404,
+    code: 404,
     success: false
 }
 ```
@@ -75,7 +75,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: 500,
+    code: 500,
     success: false
 }
 ```
@@ -87,7 +87,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: 401,
+    code: 401,
     success: false
 }
 ```
@@ -99,7 +99,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: 403,
+    code: 403,
     success: false
 }
 ```
@@ -112,7 +112,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: 400,
+    code: 400,
     success: false
 }
 ```
@@ -124,7 +124,7 @@ The result will be:
 ``` javascript
 {
     message: <message>,
-    status: <code>,
+    code: <code>,
     success: false
 }
 ```
