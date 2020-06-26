@@ -20,7 +20,7 @@ module.exports = class {
         let id = this.getID(this.resource.payload);
         let url = 'https://www.youtube.com/watch?v=' + id;
 
-        let youtube = new YouTube(Config.get("services.youtube.key"));
+        let youtube = new YouTube(Config.get("services.google.key"));
 
         youtube.getVideo(url).then(video => {
 
