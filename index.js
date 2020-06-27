@@ -9,6 +9,7 @@ const Security = require("dotapp/middlewares/security");
 const Compression = require("dotapp/middlewares/compression");
 const Http = require("dotapp/middlewares/http");
 const Token = require("dotapp/middlewares/token");
+const Policies = require("dotapp/middlewares/policies");
 const Assets = require("dotapp/middlewares/assets");
 const Cors = require("dotapp/middlewares/cors");
 const I18n = require("dotapp/middlewares/i18n");
@@ -37,6 +38,7 @@ module.exports = () => {
     app.use(Security());
     app.use(Compression());
     app.use(Token());
+    app.use(Policies());
     app.use(I18n());
     app.use(Logger());
     app.use(Assets());
