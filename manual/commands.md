@@ -18,7 +18,7 @@ export default class {
     // The command description [help]
     description = "Listing all users";
 
-    // method that fired on command
+    // method fires on command execution
     async action(args, done) {
 
         let users = await User.find();
@@ -28,7 +28,7 @@ export default class {
         this.log("Total: " + users.length);
     }
 
-    // method that fired on command cancellation
+    // method fires on command cancellation
     cancel() {
         this.log("Listing users canceled");
     }
@@ -64,7 +64,7 @@ $ node run users
 Total: 4
 ```
 
-Show all defined command on `commands` directory.
+Show all defined commands on `commands` directory.
 
 ``` bash
 $ node run help
