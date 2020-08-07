@@ -163,7 +163,7 @@ import Controller from "dotapp/controller";
 
 export default class extends Controller {
     index(req, res) {
-        if (req.hasPermission("book.view")) {
+        if (req.can("book.view")) {
             return res.ok("I have access to view book store");
         }
     }
@@ -204,7 +204,7 @@ import Controller from "dotapp/controller";
 
 export default class extends Controller {
     index(req, res) {
-        if (req.can("book.view")) {
+        if (req.hasPermission("book.view")) {
             return res.ok("I have access to view book store");
         }
 
